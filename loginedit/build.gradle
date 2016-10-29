@@ -1,0 +1,98 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
+}
+
+
+group = "com.lcq.library" // Maven Group ID for the artifact，一般填你唯一的包名
+version = "0.1" // 这个version是区分library版本的，因此当我们需要更新library时记得修改这个version
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name 'LoginEdit'
+            description 'Login EditText View'
+            url 'https://github.com/iLucasLiu/LoginEdit'
+            inceptionYear '2016'
+
+
+            packaging 'aar'
+            groupId 'com.lcq.library'//项目组织唯一的标识符，实际对应JAVA的包的结构，是main目录里java的目录结构(例如：com.abc.test)。
+            artifactId 'loginedit'//项目的唯一的标识符，实际对应项目的名称，就是项目根目录的名称。
+            version '0.1'
+
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+            scm {
+                connection 'https://github.com/iLucasLiu/LoginEdit.git'
+                url 'https://github.com/iLucasLiu/LoginEdit'
+
+
+            }
+            developers {
+                developer {
+                    name 'LucasLiu'
+                }
+            }
+        }
+    }
+}
+
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+    configurations = ['archives']
+    pkg {
+        repo = 'iMaven'
+        name = 'loginedit'
+        userOrg = 'liuchunqiu'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        version {
+            name = '0.1'
+            desc = 'Login EditText View 1.0 final'
+            vcsTag = '0.1'
+            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+        }
+    }
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
