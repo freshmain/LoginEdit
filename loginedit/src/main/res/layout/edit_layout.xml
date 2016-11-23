@@ -27,5 +27,6 @@
         android:layout_alignParentTop="true"
         android:layout_gravity="end"
         android:background="@android:color/transparent"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"/>
 </RelativeLayout>
