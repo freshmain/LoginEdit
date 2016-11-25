@@ -6,6 +6,5 @@
 
 ###一、截图
 ![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082753.png)
-![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082827.png)
 ![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082912.png)
 ![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082938.png)
