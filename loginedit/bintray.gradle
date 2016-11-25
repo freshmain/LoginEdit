@@ -1,0 +1,25 @@
+apply plugin: 'com.jfrog.bintray'
+apply from: 'constants.gradle'
+
+group = mavenGroup
+version = mavenVersion
+
+bintray {
+    user = project.hasProperty('BINTRAY_USER') ? project.getProperty('BINTRAY_USER') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('BINTRAY_KEY') ? project.getProperty('BINTRAY_KEY') : System.getenv('BINTRAY_KEY')
+
+    configurations = [ 'archives' ]
+
+    pkg {
+        repo = projectName
+        name = mavenArtifactId
+        userOrg = bintrayOrg
+        licenses = [ 'Apache-2.0' ]
+        vcsUrl = "${githubUrl}.git"
+
+        version {
+            name = mavenVersion
+            released = new Date()
+        }
+    }
+}

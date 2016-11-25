@@ -1,0 +1,12 @@
+ext {
+    projectName = 'iMaven'
+    projectDesc = 'A wrapper library for basic functions'
+
+    githubUrl = 'https://github.com/iLucasLiu/LoginEdit'
+
+    mavenGroup = 'com.lcq.library'
+    mavenArtifactId = 'loginedit'
+    mavenVersion = '0.2'
+
+    bintrayOrg = 'liuchunqiu'
+}
