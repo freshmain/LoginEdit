@@ -5,7 +5,7 @@
 密码判断：大于4个字符。（后续有时间会改为参数可设置最小长度）。
 
 ###一、截图
-![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082753.png=40x50)
-![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082827.png=40)
-![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082912.png=135)
-![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082938.png=135)
+![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082753.png =40x50)
+![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082827.png =40x50)
+![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082912.png =135x50)
+![截图1](https://github.com/iLucasLiu/LoginEdit/blob/master/screenshot/device-2016-11-25-082938.png =135x50)
